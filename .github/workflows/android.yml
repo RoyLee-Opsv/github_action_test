@@ -2,7 +2,7 @@ name: Android CI
 
 on:
   push:
-    branches: [ feature/layout ]
+    branches: [ feature/layout_edit ]
 
 jobs:
   build:
