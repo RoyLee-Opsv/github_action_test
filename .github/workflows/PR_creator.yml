@@ -24,7 +24,8 @@ jobs:
         reviewers: opsvEdgar
         assignees: RoyLee-Opsv
         milestone: 2
-        branch: develop
+        branch: merge-auto
+        delete-branch: true
         draft: false
 
 
