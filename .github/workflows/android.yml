@@ -1,8 +1,9 @@
 name: Android CI
 
 on:
-  push:
-    branches: [ feature/layout_edit ]
+  pull_request:
+    branches:    
+      - 'main'
 
 jobs:
   build:
