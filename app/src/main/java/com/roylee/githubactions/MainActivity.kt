@@ -43,6 +43,7 @@ fun DefaultPreview() {
             Greeting("Android World 2")
             Text(text = "Hello action test")
             Text(text = "Hello action test2")
+            Text(text = "Hello action test3")
         }
 
     }
