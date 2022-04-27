@@ -1,0 +1,41 @@
+name: Android CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: set up JDK 11
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+        cache: gradle
+
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+    - name: Build with Gradle
+      run: ./gradlew build
+      
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v4.0.2
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        commit-message: this is commit message
+        committer: RoyLee-Opsv <roy.lee@opensurvey.co.kr>
+        body: this is body
+          next line
+          new line
+        title: this is title
+        labels: this is label
+        reviewers: opsvEdgar
+        assignees: RoyLee-Opsv
+        milestone: 2
+        branch: develop
+
+
