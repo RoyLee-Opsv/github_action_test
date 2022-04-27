@@ -16,6 +16,7 @@ jobs:
         token: ${{ secrets.PAT }}
         commit-message: this is commit message
         committer: RoyLee-Opsv <roy.lee@opensurvey.co.kr>
+        author: RoyLee-Opsv <roy.lee@opensurvey.co.kr>
         body: this is body
           next line
           new line
@@ -24,7 +25,7 @@ jobs:
         reviewers: opsvEdgar
         assignees: RoyLee-Opsv
         milestone: 2
-        branch: merge-auto
+        branch: develop
         delete-branch: true
         draft: false
 
