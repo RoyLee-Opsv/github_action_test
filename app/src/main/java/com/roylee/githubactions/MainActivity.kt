@@ -44,6 +44,7 @@ fun DefaultPreview() {
             Text(text = "Hello action test")
             Text(text = "Hello action test2")
             Text(text = "Hello action test3")
+            Text(text = "Hello action test4")
         }
 
     }
