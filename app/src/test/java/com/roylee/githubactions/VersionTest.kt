@@ -28,7 +28,7 @@ class VersionTest {
     fun test(){
         val convertVersion = convertVersionCodeFromVersion("0.6.3 (QA)")
         Log.d("version", convertVersion.toString())
-        assert(convertVersion == 0)
+        assert(convertVersion > 0)
 
     }
 }
