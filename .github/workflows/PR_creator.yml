@@ -8,12 +8,12 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    steps:    
+    steps:
+    - uses: actions/checkout@v3      
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v4.0.2
       with:
         token: ${{ secrets.PAT }}
-        path: https://github.com/RoyLee-Opsv/github_action_test
         commit-message: this is commit message
         committer: RoyLee-Opsv <roy.lee@opensurvey.co.kr>
         body: this is body
