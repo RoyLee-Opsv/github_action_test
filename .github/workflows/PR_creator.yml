@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  createPullRequest:
 
     runs-on: ubuntu-latest
 
