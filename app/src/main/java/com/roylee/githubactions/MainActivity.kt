@@ -38,6 +38,6 @@ fun Greeting(name: String) {
 @Composable
 fun DefaultPreview() {
     GithubActionsTheme {
-        Greeting("Android World")
+        Greeting("Android World 2")
     }
 }
