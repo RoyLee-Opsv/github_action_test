@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "600819549135",
+    "project_id": "action-test-df841",
+    "storage_bucket": "action-test-df841.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:600819549135:android:0661965ac0d1b3226e08ba",
+        "android_client_info": {
+          "package_name": "com.roylee.githubactions"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "600819549135-6cbcvamj59o41tq5tk6aili08th7hkla.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCimU9I-lESH1cqkrzGdkZuzP2AwU67gYM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "600819549135-6cbcvamj59o41tq5tk6aili08th7hkla.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
