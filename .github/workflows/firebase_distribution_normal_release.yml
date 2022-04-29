@@ -22,6 +22,11 @@ jobs:
       run: chmod +x gradlew
     - name: Build normal
       run: ./gradlew assembleNormalRelease
+    - name: Upload
+      uses: actions/upload-artifact@v2
+      with:
+        name: Build Artifacts
+        path: app/build/intermediates/apk/
     - name: upload artifact to Firebase App Distribution
       uses: wzieba/Firebase-Distribution-Github-Action@v1
       with:
