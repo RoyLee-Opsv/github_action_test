@@ -28,4 +28,4 @@ jobs:
         appId: ${{secrets.FIREBASE_APP_ID}}
         token: ${{secrets.FIREBASE_TOKEN}}
         groups: testers
-        file: app/build/outputs/apk/normal/release/app-normal-release.apk
+        file: app/build/intermediates/apk/normal/release/app-normal-release.apk
