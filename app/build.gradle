@@ -20,20 +20,63 @@ android {
         }
     }
 
+    signingConfigs {
+        normalRelease {
+            storeFile file('../actionTestKey')
+            keyAlias 'actionTestKey'
+            keyPassword 'abcde12345'
+            storePassword 'abcde12345'
+        }
+        normalDebug { //현재는 먹지 않는 설정 debug는 default로 자신의 기본을 가져가고 이를 변경하기가 어려움.
+            storeFile file('../actionTestKey')
+            keyAlias 'actionTestKey'
+            keyPassword 'abcde12345'
+            storePassword 'abcde12345'
+        }
+        qaRelease {
+            storeFile file('../actionTestKey')
+            keyAlias 'actionTestKey'
+            keyPassword 'abcde12345'
+            storePassword 'abcde12345'
+        }
+        qaDebug { //현재는 먹지 않는 설정
+            storeFile file('../actionTestKey')
+            keyAlias 'actionTestKey'
+            keyPassword 'abcde12345'
+            storePassword 'abcde12345'
+        }
+        devRelease {
+            storeFile file('../actionTestKey')
+            keyAlias 'actionTestKey'
+            keyPassword 'abcde12345'
+            storePassword 'abcde12345'
+        }
+        devDebug {
+            storeFile file('../actionTestKey')
+            keyAlias 'actionTestKey'
+            keyPassword 'abcde12345'
+            storePassword 'abcde12345'
+        }
+    }
+
     flavorDimensions "default"
     productFlavors {
         normal {
             versionNameSuffix '.1 (Normal)'
+            signingConfig signingConfigs.normalRelease
         }
 
         dev {
             versionNameSuffix '.1 (DEV)'
+            signingConfig signingConfigs.devDebug
         }
 
         qa {
             versionNameSuffix '.3 (QA)'
+            signingConfig signingConfigs.qaDebug
         }
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -44,7 +87,6 @@ android {
             debuggable true
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-
         }
     }
     compileOptions {
