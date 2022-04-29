@@ -1,0 +1,31 @@
+name: Firebase distribution Normal Release
+
+on:
+  push:
+    branches: [ release/* ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: set up JDK 11
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+        cache: gradle
+
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+    - name: Build normal
+      run: ./gradlew normalRelease
+    - name: upload artifact to Firebase App Distribution
+      uses: wzieba/Firebase-Distribution-Github-Action@v1
+      with:
+        appId: ${{secrets.FIREBASE_APP_ID}}
+        token: ${{secrets.FIREBASE_TOKEN}}
+        groups: testers
+        file: app/build/outputs/apk/normal/release/app-normal-release.apk
